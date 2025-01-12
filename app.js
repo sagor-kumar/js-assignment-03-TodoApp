@@ -2,11 +2,15 @@
 const taskInput = document.getElementById("task-input");
 const addTaskBtn = document.getElementById("add-task");
 const taskContainer = document.getElementById("task-container");
+const addTaskBtnDiv = document.getElementById("addTaskBtnDiv");
+
+addTaskBtnDiv.addEventListener("click", createTask);
 
 // create a task
 
 function createTask() {
   const task = taskInput.value;
+
   if (task === "") {
     alert("The field is empty!");
   } else {

@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
       @layer components {
-        .task-div {
+        .task-list {
           @apply flex gap-4;
         }
         .task-input {
@@ -32,38 +32,42 @@
         <!-- Add Task Starts -->
         <div class="max-w-2xl mx-auto rounded-md">
           <h2 class="text-center text-3xl font-bold pb-7">Todo App</h2>
-          <form id="task-form"  class="relative max-w-2xl mx-auto flex gap-3">
-              <input
-                type="text"
-                id="add-task-input"
-                placeholder="Add Task"
-                class="w-full rounded-md border border-gray-300 py-2.5 pe-10 shadow-sm sm:text-sm px-2"
-              />
-  
-                <button type="submit" id="add-task-btn" class="grid w-20 place-content-center bg-[#8e4bea] rounded-md cursor-pointer py-2.5 text-gray-600 hover:text-gray-700">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke='var(--token-ba906229-44dc-4a5e-a392-6a26c03d403a, rgb(255, 255, 255)) /* {"name":"White"} */'
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    style="width: 110%; height: 100%"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                  </svg>
-                </button>
-          </form>
+          <div class="relative max-w-2xl mx-auto flex gap-3">
+            <input
+              type="text"
+              id="task-input"
+              placeholder="Add Task"
+              class="w-full rounded-md border border-gray-300 py-2.5 pe-10 shadow-sm sm:text-sm px-2"
+            />
+
+            <span
+              onclick="createTask()" class="grid w-20 place-content-center bg-[#8e4bea] rounded-md cursor-pointer "
+            >
+              <button type="button" id="add-task" class="text-gray-600 hover:text-gray-700">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke='var(--token-ba906229-44dc-4a5e-a392-6a26c03d403a, rgb(255, 255, 255)) /* {"name":"White"} */'
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="width: 110%; height: 100%"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </span>
+          </div>
         </div>
       <!-- Add Task Ends -->
 
       <!-- Task List Container -->
         <div id="task-container" class="max-w-2xl mx-auto mt-6 rounded-md flex flex-col gap-2">
-          <!-- <div class="task-div">
+          <!-- <div class="task-list">
             <input type="text" / class="task-input" value="Task 1" readonly>
             <div class="button-group">
               <div
@@ -112,6 +116,6 @@
         <!-- Task List Container -->
       </section>
     </main>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
